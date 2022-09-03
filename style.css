@@ -39,7 +39,6 @@ h3{
     display: inline-block;
     text-align: left;
     line-height: 2;
-    
 }
 a{
     color:  #11999E;
@@ -97,25 +96,63 @@ hr{
 .copyright{
     color: #EAF6F6;
 }
-.btn {
-    background: #3498db;
-    background-image: -webkit-linear-gradient(top, #3498db, #2980b9);
-    background-image: -moz-linear-gradient(top, #3498db, #2980b9);
-    background-image: -ms-linear-gradient(top, #3498db, #2980b9);
-    background-image: -o-linear-gradient(top, #3498db, #2980b9);
-    background-image: linear-gradient(to bottom, #3498db, #2980b9);
-    -webkit-border-radius: 28;
-    -moz-border-radius: 28;
-    border-radius: 28px;
-    font-family: Arial;
+
+.button {
+    display: inline-block;
+    padding: 12px 24px;
+    border: 1px solid #66BFBF ;
+    border-radius: 4px;
+    transition: all 0.2s ease-in;
+    position: relative;
+    overflow: hidden;
+    font-size: 19px;
+    color: #66BFBF;
+    z-index: 1;
+   }
+   
+   .button:before {
+    content: "";
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%) scaleY(1) scaleX(1.25);
+    top: 100%;
+    width: 140%;
+    height: 180%;
+    background-color: RGB(102, 191, 191);
+    border-radius: 50%;
+    display: block;
+    transition: all 0.5s 0.1s cubic-bezier(0.55, 0, 0.1, 1);
+    z-index: -1;
+   }
+   
+   .button:after {
+    content: "";
+    position: absolute;
+    left: 55%;
+    transform: translateX(-50%) scaleY(1) scaleX(1.45);
+    top: 180%;
+    width: 160%;
+    height: 190%;
+    background-color: #39bda7;
+    border-radius: 50%;
+    display: block;
+    transition: all 0.5s 0.1s cubic-bezier(0.55, 0, 0.1, 1);
+    z-index: -1;
+   }
+   
+   .button:hover {
     color: #ffffff;
-    font-size: 20px;
-    padding: 12px 23px 12px 24px;
-    border: solid #468cb8 2px;
-    text-decoration: none;
-  }
-  
-  .btn:hover {
-    background: #3cb0fd;
-    text-decoration: none;
-  }
+    border: 1px solid #39bda7;
+   }
+   
+   .button:hover:before {
+    top: -35%;
+    background-color: #39bda7;
+    transform: translateX(-50%) scaleY(1.3) scaleX(0.8);
+   }
+   
+   .button:hover:after {
+    top: -45%;
+    background-color: #39bda7;
+    transform: translateX(-50%) scaleY(1.3) scaleX(0.8);
+   }
